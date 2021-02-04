@@ -4,9 +4,30 @@ In this chapter, we will discuss about biological preliminaries, computational p
 \label{bio_pre}
 In this section we will discuss about biological terms that would be necessary to do understand the report. \\[10pt]
 
-\textbf{DNA(deoxyribonucleic acid):} DNA is a genetic code that determines characteristics of any living force. We can get DNA from Nucleus of our cell. \\[5pt] 
+\textbf{DNA (deoxyribonucleic acid):} DNA is made out of two polynucleotide chain and form a double helix, DNA is a genetic code that determines characteristics of any living force. Each of this chain made out of monomers named nucleotides. There are four of this present in DNA denoted as (A, T, G, C) they are basically a sugar called deoxyribose and a phosphate group.  \cite{wiki:DNA}. \\[5pt]
 
-\textbf{RNA(ribonucleic acid):} RNA is a molecule that plays very essential role in Genomic Analysis. we can get RNA from DNA through transcription process.\\[5pt]
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{DNA-cell.png}
+    \caption{DNA location within a chromosome in a eukaryote cell  \index{DNA} }
+    \label{fig:dnafig}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.25\textwidth]{dna}
+    \caption{DNA structure moleculer level \index{DNA} }
+    \label{fig:dnafig}
+\end{figure}
+ 
+\textbf{RNA (ribonucleic acid):} RNA is a molecule that plays very essential role in Genomic Analysis. we can get RNA from DNA through transcription process. Using transcription method RNA is formed from DNA. There are two types of RNA, and they are: (1) Coding RNA (2) Non-coding RNA. mRNA (messenger RNA) belongs to Coding RNA. mRNA carries information from DNA to make proteins. tRNA (Ribosomal RNA) and rRNA (Transfer RNA) belongs to Non-Coding RNA. rRNA can be found in ribosome. In a cell 80\% of total RNA are rRNA. tRNA is the smallest RNA but plays essential role in translation. Transfering amino acids during protein synthesis is the main fuction of tRNA.\\[5pt]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\textwidth]{rna}
+    \caption{Lifecycle of RNA in eukaryotic cell \cite{wiki:RNA}\index{RNA} }
+    \label{fig:rnafig}
+\end{figure}
 
 \textbf{Genomic Analysis:} Genomic analysis is a classification, identification or comparison of genomic features such as gene expression, RNA-seq, gene count data. Methods for genomic analysis requires high-throughput sequencing data.\\[5pt]
 
@@ -24,11 +45,50 @@ In this section we will discuss about biological terms that would be necessary t
 \label{comp_pre}
 In this section we will discuss about computational algorithm and some evaluation matrices.
 \subsection{Algorithms}
-\textbf{Support Vector Machine:} Initially, Support Vector Machine algorithm tries to find a hyper plane in n-dimensional space that classifies the data point distinctly. Then, it tries to maximize the margin which provides reinforcement for the future data points that can be classified more accurately. Support Vector Machine is supervised algorithm that can be used for regression and classification.\\[5pt]
-\textbf{k-Nearest Neighbour:} This algorithm works based on data point similarity. It is a supervised machine learning algorithm that is a non parametric algorithm. It stores all the given data as it is and predict the new data based on the similarity index of its nearest neighbours.\\[5pt]
-\textbf{Decision Tree:} Decision tree is also a non parametric supervised machine learning model. It learns from data to approximate decision boundary with some if and else decision rules. Decision tree build models in a form of tree structure. It divides datasets into tree-leaves based on decision rules and at the leaf we have the final decision result.\\[5pt]
+\textbf{Support Vector Machine:} Initially, Support Vector Machine algorithm tries to find a hyper plane in n-dimensional space that classifies the data point distinctly. Then, it tries to maximize the margin which provides reinforcement for the future data points that can be classified more accurately. Support Vector Machine is supervised algorithm that can be used for regression and classification.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{svm}
+    \caption{Visualization of Support Vector Machine \cite{wiki:Support-vector_machine}\index{Support Vector Machine} }
+    \label{fig:SVMfig}
+\end{figure}
+
+Here, H1, H2 and H3 are hyperplane. As we can see, H1 can not separate the classes. H2 does the job but in a smaller margin. H3 separates the classes with maximum margin.\\[5pt]
+
+\textbf{k-Nearest Neighbour:} This algorithm works based on data point similarity. It is a supervised machine learning algorithm that is a non parametric algorithm. It stores all the given data as it is and predict the new data based on the similarity index of its nearest neighbours.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{knn}
+    \caption{Visualization of k-nearest neighbour \cite{wiki:K-nearest_neighbors_algorithm}\index{k-nearest neighbour} }
+    \label{fig:KNNfig}
+\end{figure}
+
+Here, green circle is a test sample. Blue squares and red triangles are two class. Green circle should be classified as blue square or red triangle. If k=3, then in the solid line circle we can see that there are two triangle and one square. So the green circle will be classified as triangle. If k=5, then in the dotted circle we can see that there are three square and two triangle. Therefore, the green circle will be classified as square. \\[5pt]
+
+\textbf{Decision Tree:} Decision tree is also a non parametric supervised machine learning model. It learns from data to approximate decision boundary with some if and else decision rules. Decision tree build models in a form of tree structure. It divides datasets into tree-leaves based on decision rules and at the leaf we have the final decision result.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{dt}
+    \caption{Visualization of Decision tree \cite{wiki:Decision_tree_learning}\index{decision tree} }
+    \label{fig:DTfig}
+\end{figure}
+
+This tree is showing the survivability of passengers on the Titanic. Here sibsp is the number of spouses or siblings aboard. The leaf nodes show that the probability of the survived and dead persons. For example: the percentage of survival is good if a person is (i) male and his age is under or equal 9.5 and has at most 2 siblings or (ii) female.  \\[5pt]
+
 \textbf{Random Forest:} Random forest is a simplistic and mostly used model which does not require much model tuning yet gives best possible result compared to other models. Random forest consists of nothing but n-decision trees/forests. This model focused on random splitting of features and finding best feature among those random splits.\\[5pt]
+
 \textbf{Neural Network:} Neural network is an unsupervised algorithm. To know unknown relation between various parameters a model similar to brain are built. Neural network has layers containing neurons, which are connected to each other densely and sometimes sparsely.\\[5pt]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.35\textwidth]{nn}
+    \caption{Visualization of Neural Network\cite{wiki:Neural_network}\index{neural network} }
+    \label{fig:NNfig}
+\end{figure}
+
 \subsection{Evaluation Matrices}
 \textbf{Precision:} Precision is the percentage of correct classified result among true results.
 \begin{equation} \label{eq1}
@@ -100,6 +160,8 @@ The result describes the best performing models accuracy scores and cross valida
   \item \textsc{Wang et el.} focused on better accuracy with neural network. In this paper they tried to show a better accuracy can achieved without knowing its sequencing depth. First, they filter out genes that have zero count in more than 80\% of samples. Then they augmented data to eradicate noise in training. They presented an augmented approach which made their data scale invariant and finally they classify their data with neural network. In short, we can assume neural network is a good performer for gene count data \cite{10.1093/bioinformatics/btz801}. 
   \item \textsc{Yungyung et el.} used RNA-seq expression of 9096 tumor samples which represent 31 types of tumor collected from TCGA (The Cancer Genome Atlas).For gene selection they use genetic algorithm and for classification they used k-nearest neighbour. for data process they  log2-transforms the data for normalization. They eliminated sex-specific cancer samples additionally the cancer that has low sample count for sex - specification. They made some sets of 20 genes and perform classification experiment with those data sets and finally they found more than one "20 gene set" that can classify more than 90\% samples accurately. They also found some gene that express differently between genders. After further analysis they found a gene that are responsible for showing sexual-dimorphism in liver cancer \cite{pmid28673244}. 
   
+  \item \textsc{Wenbo Guo et al.} discussed about molecular heterogeneities and complex microenvironments which bring great challenges for diagnosis of cancer as well as treatment procedure. Recently the advance use of single-cell RNA-sequencing technology which is called scRNA-seq, made these possible. Here, they developed an R package called scCancer, which mainly used for  focusing on the process and analysis of scRNA-seq data for cancer research.  scCancer integrated the  basic steps of processing scRNA-seq data . Except the processing steps of basic data, this package works for cancer-specific features which took several special considerations which were cancer microenvironment cell-types identification, comprehensive quality control, cell malignancy estimation, intra-tumor heterogeneity analysis at phenotype and signature levels, cell–cell interaction analyses, etc. It used common batch-effect correction methods for performing multi-sample integration analysis. They proposed a new algorithm named ‘NormalMNN’. It can automatically generate user-friendly graphic reports to overview all the results. They tested on 433 405 cells of 56 samples and demonstrated good performance by using their proposed method \cite{10.1093/bib/bbaa127}.
+  
    \begin{table}[H]
     \centering
     \begin{tabular}{|| p{2.1cm} |p{2.1cm} |p{2.1cm} |p{1.5cm}|p{2.1cm} | p{2.1cm}||}
@@ -130,16 +192,27 @@ The result describes the best performing models accuracy scores and cross valida
   
   \item \textsc{Tianyu Wang et el.} using single cell RNA Sequencing data ,they performed comparative analysis of differential gene expression tools. When creating new tools or research about single cell RNA seq and gene expression analysis we must have to choose appropriate tools. In this paper ,they compared about 11 tools of differential gene expression analysis. They also analyze every tools performance and their methods .They identified 8 tools using single cell RNA seq data which are (MAST,SCDE, scDD, SINCERA, D3E,DEsingle, Monocle2 and SigEMD) and two are Bulk RNAseq data which commonly used in (edgeR, and DESeq2) and multimodal data(EMDomics). After performing analysis , they said the tools are developed for scRNAseq data which focused on handling zero counts or multimodality but not both at a same time. But there are some scopes of improvement and also lack of detecting true DE gens \cite{Wang2019}.
   
-  \item \textsc{Sibo Zhu at al.} reviewed some application in cancer research using single cell RNAseq data. They also reviewed some aspects which were methodology of single cell RNAseq , single cell isolation techniques, tumor research and circulating tumor cells. Single-cell transcriptomic analysis transformed gene regulation networks, metastasis and the complexity of intratumoral cell-to-cell heterogeneity. So this technology has more benefits than early age technology \cite{OT17893}.
-  
-  \item \textsc{Athansios} reviewed and discussed the improvement of cancer diagnosis using AI and ML. From the early age there are some methods and traditional medical tools that can used for cancer detection. But after coming the AI and ML, it has great impact on medical science. For finding cancer, there are some test developed over the year like Endoscopy procedures, Biopsy and Cytology tests and Imaging (Radiology) tests. AI and Ml can easily detect cancer using medical image data analysis. This result do better comparing with doctors observation or traditional diagnosis tools. Deep learning can predict the five years risk of any cancer using medical based data. So this advance technology  already performs better with higher accuracy in detecting early age cancer like gastric cancer diagnosis, thyroid cancer diagnosis, lung cancer diagnosis, mammography of breast cancer, oral cancer, skin cancer, hepatocellular (liver) cancer \cite{article}.
   
   \item \textsc{Ricvan Dana Nindrea at al.} figured out the risk calculation for breast cancer through diagnostic accuracy of different ML algorithms. For finding the result,  they analysed all the published research articles (between January 2000 to May 2018) for  breast cancer where the calculation of the risk is measured by the diagnostic test accuracy for different machine learning algorithms. They collected the articles from the online article databases of PubMed, ProQuest and EBSCO.They reviewed total 1,879 articles. After the meta-analysis and their systematic review, they selected 11 articles. They actually performed  comprehensive analysis of five algorithm which are (1) Super VectorMachine (SVM), (2) Artificial Neural Networks (ANN), (3) Decision Tree (DT), (4) Naive Bayes (NB), (5) K-Nearest Neighbor(KNN). They classified the result as an excellent category by the help of SVM, where the Area Under Curve (AUC) which was found from the SROC  was more than 90\%. At the end, the meta-analysis got the conclusion that the SVM algorithm can calculate the risk of  breast cancer with the maximum  accuracy(99.51\%) rather than any other machine learning algorithms \cite{Nindrea2018}.
   
     \item \textsc{Kourou et al.} described the importance of classifying cancer patients into two groups on basis of the risk measurement, either high or low. It has influenced countless researchers of the field of bioinformatics and biomedical for studying machine learning (ML) methods. Various ML techniques employed for the improvement and execution of cancerous conditions. The ML tools can also able to recognize the key features which are found from complex datasets and reveal their significance. There is lots of different techniques, which are Artificial Neural Networks (ANNs), Bayesian Networks (BNs), Support Vector Machines (SVMs)  and Decision Trees (DTs). These approaches applied in the development of predictive models in the research of cancer and result in an effective and accurate decision-making process. They found that most of the predictions were performed by integrating clinical, genomic, imaging,  histological, epidemiological, demographic data and proteomic data or different combinations of these types. Based on their analysis, it is obvious that the integration of heterogeneous data which is actually multidimensional, that combines with different methods for classification and selection of feature can provide a tool for inference in the domain of cancer \cite{KOUROU20158}.
     
     \item \textsc{Wenbin Yue et al.} shared their experience while reviewing the machine learning (ML) algorithms  and techniques in the diagnosis and prognosis of breast cancer (BC). They provide explanations of various ML techniques, which are artificial neural networks (ANNs), support vector machines (SVMs), decision trees (DTs), and k-nearest neighbors (k-NNs). After that, they apply these algorithms in the analysis of breast cancer data. They collected the data from the Wisconsin breast cancer database (WBCD) which is known as the benchmark database for comparing the results through several algorithms. In the process of improving the classification and the accuracy of prediction, they found remarkable results through using these ML techniques. Finally, they describe and show a healthcare system model of their current work.  They also found that for a long period ANNs have performed on BC diagnosis and prognosis, but at present, the other ML methods have been applying in the intelligent healthcare systems so that it creates some different or new options for physicians \cite{designs2020013}.
-  
+    
+    \item \textsc{Xiaomei Li et al} proposed a novel method scPrognosis based on single-cell RNA data for breast cancer prognosis. Breast cancer is a heterogeneous disease. Bulk RNA seq data have limited performance and abandon the intratumor heterogeneity. Their scPrognosis has 5 steps. The proposed scPrognosis novel method has better performance and provides clues to the relation between EMT and clinical outcomes of breast cancer. Recently, a wide range of computational methods have been developed to detect multi-genes for breast cancer prognosis, and some of the methods have been approved for commercial use, including PAM50, Mamma, and RS test. They used three measures to rank genes, including Median Absolute Deviation (MAD) of gene expression profiles, Differentiation of genes in different stages of EMT (SDE), and gene co-expression NETwork in EMT. They compared the experiential method with the existing methods on four breast cancer datasets. The results of scRNAseq based method are good and useful for breast cancer prognosis. Their method shows the link between EMT and the clinical outcomes of breast cancer, which may give some clues for current cancer therapeutics.\cite{10.1371/journal.pcbi.1008133}
+
+
+\begin{table}[]
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+Name                                                               & Cancer & \begin{tabular}[c]{@{}l@{}}Single Cell\\ RNASeq\end{tabular} & \begin{tabular}[c]{@{}l@{}}BULK\\ RNASeq\end{tabular} & \begin{tabular}[c]{@{}l@{}}Gene\\ Expression\end{tabular} & \begin{tabular}[c]{@{}l@{}}Machine\\ Learning\end{tabular} & Tools & Outcome                                                                                                                           \\ \hline
+\begin{tabular}[c]{@{}l@{}}SHAO-BOLIANG\\  ET AL\end{tabular}      &        &                                                              &                                                       &                                                           &                                                            &       & \begin{tabular}[c]{@{}l@{}}Importance of \\ single cell technology\\  in cancer diagnosis \\ and treatment.\end{tabular}          \\ \hline
+\begin{tabular}[c]{@{}l@{}}TIANYUWANG\\  ET AL\end{tabular}        &        &                                                              &                                                       &                                                           &                                                            &       & \begin{tabular}[c]{@{}l@{}}Talked about different \\ tool for single cell \\ gene expression.\end{tabular}                        \\ \hline
+\begin{tabular}[c]{@{}l@{}}RICVANDA-\\NANINDREA\\  ET AL\end{tabular} &        &                                                              &                                                       &                                                           &                                                            &       & \begin{tabular}[c]{@{}l@{}}Meta analysis of \\ machine learning \\ algorithms for breast \\ cancer risk calculation.\end{tabular} \\ \hline
+KOUROU ET AL                                                       &        &                                                              &                                                       &                                                           &                                                            &       & \begin{tabular}[c]{@{}l@{}}Brief discussion \\ about ML algorithms \\ in cancer  Prognosis \\ and prediction.\end{tabular}        \\ \hline
+WENBINYUE\\   ET AL                                                  &        &                                                              &                                                       &                                                           &                                                            &       & \begin{tabular}[c]{@{}l@{}}A health care \\ system model.\end{tabular}                                                            \\ \hline
+\end{tabular}
+\end{table}
 
   
   
