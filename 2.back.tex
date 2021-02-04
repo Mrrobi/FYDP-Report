@@ -1,0 +1,152 @@
+\chapter{Background}
+In this chapter, we will discuss about biological preliminaries, computational preliminaries and literature review.
+\section{Biological Preliminaries}
+\label{bio_pre}
+In this section we will discuss about biological terms that would be necessary to do understand the report. \\[10pt]
+\textbf{DNA(deoxyribonucleic acid):} DNA is a genetic code that determines characteristics of any living force. We can get DNA from Nucleus of our cell. \\[5pt] 
+\textbf{RNA(ribonucleic acid):} RNA is a molecule that plays very essential role in Genomic Analysis. we can get RNA from DNA through transcription process.\\[5pt]
+\textbf{Genomic Analysis:} Genomic analysis is a classification, identification or comparison of genomic features such as gene expression, RNA-seq, gene count data. Methods for genomic analysis requires high-throughput sequencing data.\\[5pt]
+\textbf{Gene:} A gene is a portion of DNA that is required for creating a functional protein or RNA-seq.\\[5pt]
+\textbf{Gene Expression:} A process where DNA are converted into a functional product such as protein is called gene expression.\\[5pt]
+\textbf{RNA-Seq:} RNA-Seq is sequencing technique by using next generation sequencing to find the quantity and availability of RNA in a biological sample.\\[5pt]
+\textbf{Single Cell RNA-Seq:} Single cell RNA-seq is a process which can determine complex and rare cell population, relationship between genes and allows analysing properties of cell population.\\[5pt]
+\textbf{Cancer:} Cancer is a group of disease which refers to abnormal cell division with the potential to invading nearby tissues as well as spreading other part of the body through the blood system. \\[5pt]  
+\section{Computational Preliminaries}
+\label{comp_pre}
+In this section we will discuss about computational algorithm and some evaluation matrices.
+\subsection{Algorithms}
+\textbf{Support Vector Machine:} Initially, Support Vector Machine algorithm tries to find a hyper plane in n-dimensional space that classifies the data point distinctly. Then, it tries to maximize the margin which provides reinforcement for the future data points that can be classified more accurately. Support Vector Machine is supervised algorithm that can be used for regression and classification.\\[5pt]
+\textbf{k-Nearest Neighbour:} This algorithm works based on data point similarity. It is a supervised machine learning algorithm that is a non parametric algorithm. It stores all the given data as it is and predict the new data based on the similarity index of its nearest neighbours.\\[5pt]
+\textbf{Decision Tree:} Decision tree is also a non parametric supervised machine learning model. It learns from data to approximate decision boundary with some if and else decision rules. Decision tree build models in a form of tree structure. It divides datasets into tree-leaves based on decision rules and at the leaf we have the final decision result.\\[5pt]
+\textbf{Random Forest:} Random forest is a simplistic and mostly used model which does not require much model tuning yet gives best possible result compared to other models. Random forest consists of nothing but n-decision trees/forests. This model focused on random splitting of features and finding best feature among those random splits.\\[5pt]
+\textbf{Neural Network:} Neural network is an unsupervised algorithm. To know unknown relation between various parameters a model similar to brain are built. Neural network has layers containing neurons, which are connected to each other densely and sometimes sparsely.\\[5pt]
+\subsection{Evaluation Matrices}
+\textbf{Precision:} Precision is the percentage of correct classified result among true results.
+\begin{equation} \label{eq1}
+\begin{split}
+Precision & = \frac{tp}{tp+fp}
+\end{split}
+\end{equation}
+\textbf{Recall:} Recall is the percentage of correct classified result among the predicted result.
+\begin{equation} \label{eq2}
+\begin{split}
+Recall & = \frac{tp}{tp+fn}
+\end{split}
+\end{equation}
+\textbf{Accuracy:} Accuracy determines how accurate the model classifies.
+\begin{equation} \label{eq3}
+\begin{split}
+Accuracy & = \frac{tp+tn}{tp+fp+tn+fn}
+\end{split}
+\end{equation}
+\textbf{Mathews Correlation Coefficient:} Mathews Correlation Coefficient is a balanced measure even if the data is imbalanced. It has a range of -1 to 1 where if the model is less accurate then it predicts value near -1. And, if the model is accurate then it predicts value near 1. Mainly, it takes into account all the true positives, false positives, true negatives and false negatives.
+\begin{equation} \label{eq4}
+\begin{split}
+Precision & = \frac{(tp*tn)-(fp*fn)}{\sqrt{(tp+fp)(tp+fn)(tn+fp)(tn+fn)}}
+\end{split}
+\end{equation}
+\\[2pt]
+Here, tp = true positive, tn = true negative, fp = false positive, fn = false negative.
+\section{Literature Review}
+\label{lit_rev}
+\subsection{TCGA Cancer Data Related Works}
+\begin{enumerate}
+  \item \textsc{Kim et el.} tried to classify 21 cancer type through single-cell RNA-Seq gene count data collected from TCGA (The Cancer Genome Atlas). Here at first they tried to filter genes from each cancer Based on highest F-score (ANOVA test).They chose some n-number (n = 5, 10, 15, 20, 25, 30, 50, 100, 150, 200, 250, 300) of genes for there training feature and found that n = 300 gives the best performance. After that they normalize data using Z-Score and did Binary And Pan-cancer classification using few ML models (SVM,RF,KNN,NN). For testing they collected breast cancer and skin melanoma cancer data and perform test on their previously trained model. They tried to show us some cancer shares similar gene expression property which can lead the machine learning model to mis-classify some sample into different label \cite{10.1093/bioinformatics/btz772}.
+  \item \textsc{Yi et el.} takes 33 types of cancer from TCGA (The Cancer Genome Atlas) and do comparison of different ML models based on prediction accuracy, recall, precision, f-score and training time. The models they choose are DT, KNN, Linear - SVM, Poly - SVM and ANN. The accuracy of linear SVM is 0.94988 and takes four hour for training, Poly-SVM gives an accuracy of 0.76754 and takes 53 minute for training, KNN,  DT, ANN has accuracy of 0.89212, 0.86014 and 0.94797 and takes 30 seconds, 24 minutes and 19 minutes respectively for training.   
+  
+%   \begin{table}[H]
+%     \centering
+%     \begin{tabular}{|| p{2.1cm} | c | c | c | c | c ||}
+%     \hline
+%      Testing models & Avg Precision & avg Recall & Accuracy & avg F1-Score & Training Time \\
+%      \hline\hline
+%      Linear-SVM & 0.95 & 0.95 & 0.94988 & 0.95 & ~4hr \\  
+%      POLY-SVM & 0.86 & 0.77 & 0.76754 & 0.77 & ~ 52min52sec \\
+%      KNN & 0.90 & 0.89 & 0.89212 & 0.89 & ~ 30 sec \\
+%      DT & 0.86 & 0.86 & 0.86014 & 0.86 & ~ 23min42Sec \\
+%      ANN & 0.95 & 0.95 & 0.94797 & 0.95 & ~ 18min43sec \\
+%      \hline
+%     \end{tabular}
+%     \caption{Base Model Testing Result}
+%     \label{table:1}
+%     \end{table}
+  
+  They create 60 total training scenario but for computational complexity they choose 21 training scenario was selected by them for their experiment. among 21 experiment five were selected from POLY-SVM and DT for each, three were from ANN and four were selected from Linear-SVM and KNN for each then they do 5-fold cross validation to determine there top performing model based validation score and accuracy score. Here linear-SVM, POLY-SVM, KNN, DT and ANN has Cross Validation score of 0.94980, 0.94030, 0.87455, 0.92444 and 0.91394 and accuracy 0.95808, 0.94545, 0.86313, 0.92222 and 0.9151 respectively.
+%   \begin{table}[H]
+%     \centering
+%     \begin{tabular}{|| c | c | c | c | c | c ||}
+%     \hline
+%      Model Name & Linear-SVM & POLY-SVM & KNN & DT & ANN \\
+%      \hline\hline
+%      Cross Validation Score & 0.94980 & 0.94030 & 0.87455 & 0.92444 & 0.91394 \\  
+%      Accuracy Score & 0.95808 & 0.94545 & 0.86313 & 0.92222 & 0.91515 \\
+%      \hline
+%     \end{tabular}
+%     \caption{Performance table of best Algorithm model}
+%     \label{table:2}
+%     \end{table} 
+%   The table \ref{table:2} describes the best performing models accuracy scores and cross validation scores.
+The result describes the best performing models accuracy scores and cross validation scores \cite{pmid30441551}.
+  
+  \item \textsc{Wang et el.} focused on better accuracy with neural network. In this paper they tried to show a better accuracy can achieved without knowing its sequencing depth. First, they filter out genes that have zero count in more than 80\% of samples. Then they augmented data to eradicate noise in training. They presented an augmented approach which made their data scale invariant and finally they classify their data with neural network. In short, we can assume neural network is a good performer for gene count data \cite{10.1093/bioinformatics/btz801}. 
+  \item \textsc{Yungyung et el.} used RNA-seq expression of 9096 tumor samples which represent 31 types of tumor collected from TCGA (The Cancer Genome Atlas).For gene selection they use genetic algorithm and for classification they used k-nearest neighbour. for data process they  log2-transforms the data for normalization. They eliminated sex-specific cancer samples additionally the cancer that has low sample count for sex - specification. They made some sets of 20 genes and perform classification experiment with those data sets and finally they found more than one "20 gene set" that can classify more than 90\% samples accurately. They also found some gene that express differently between genders. After further analysis they found a gene that are responsible for showing sexual-dimorphism in liver cancer \cite{pmid28673244}. 
+  
+   \begin{table}[H]
+    \centering
+    \begin{tabular}{|| p{2.1cm} |p{2.1cm} |p{2.1cm} |p{1.5cm}|p{2.1cm} | p{2.1cm}||}
+    \hline\hline
+     Name & Type & Number of Dataset Used & Algorithm & Feature selection technique & Best algorithm \\
+     \hline
+     Kim et el. \cite{10.1093/bioinformatics/btz772} & Cancer classification & 21 & NN, Linear-SVM, RBF Kernel- SVM, KNN, RF & F-Anova Test & NN  \\
+      \hline
+      Yi et el. \cite{pmid30441551} & Cancer Classification & 33 & DT,  KNN,  Poly-SVM, Linear-SVM, ANN &Tree classifier, Varience threshold, Min-max scaling & ANN  \\ 
+     \hline
+     Wang et el. \cite{10.1093/bioinformatics/btz801} & Classifier for RNASeq data
+ & 9 & NN, KNN, SVM, CART, RF, PLDA, NBLDA ,TSP, K-TSP & TC, UQ, Scran, DESeq & NN \\
+     \hline
+    
+     
+     Yungyung et el. \cite{pmid28673244} & Cancer classification & 31 & KNN, XGBoost & Genetic Algorithm & None \\
+     \hline
+    
+     
+     
+    \end{tabular}
+    \caption{Summary table of TCGA related review}
+    \label{table:1}
+    \end{table}
+
+
+  \item \textsc{Shao-Bo Liang et el.} outlined the application of recent cancer research using single cell technology.  This advanced technology can analyze tumor epigenetics, intratumor heterogeneity, tumor epigenetics and lead the way of individualized treatment for these stages. They proposed that single cell technology can easily detect rare cancer cells like circulating tumor cells (CTCs),intratumor heterogeneity (ITH), Cancer stem cells(CSCs), tumor epigenetics. Their review can improve biological characteristics and prevent  cancer and tumor diseases that can have a great impact in clinical application which is more accurate than before \cite{pmid10.1016}.
+  
+  \item \textsc{Tianyu Wang et el.} using single cell RNA Sequencing data ,they performed comparative analysis of differential gene expression tools. When creating new tools or research about single cell RNA seq and gene expression analysis we must have to choose appropriate tools. In this paper ,they compared about 11 tools of differential gene expression analysis. They also analyze every tools performance and their methods .They identified 8 tools using single cell RNA seq data which are (MAST,SCDE, scDD, SINCERA, D3E,DEsingle, Monocle2 and SigEMD) and two are Bulk RNAseq data which commonly used in (edgeR, and DESeq2) and multimodal data(EMDomics). After performing analysis , they said the tools are developed for scRNAseq data which focused on handling zero counts or multimodality but not both at a same time. But there are some scopes of improvement and also lack of detecting true DE gens \cite{Wang2019}.
+  
+  \item \textsc{Sibo Zhu at al.} reviewed some application in cancer research using single cell RNAseq data. They also reviewed some aspects which were methodology of single cell RNAseq , single cell isolation techniques, tumor research and circulating tumor cells. Single-cell transcriptomic analysis transformed gene regulation networks, metastasis and the complexity of intratumoral cell-to-cell heterogeneity. So this technology has more benefits than early age technology \cite{OT17893}.
+  
+  \item \textsc{Athansios} reviewed and discussed the improvement of cancer diagnosis using AI and ML. From the early age there are some methods and traditional medical tools that can used for cancer detection. But after coming the AI and ML, it has great impact on medical science. For finding cancer, there are some test developed over the year like Endoscopy procedures, Biopsy and Cytology tests and Imaging (Radiology) tests. AI and Ml can easily detect cancer using medical image data analysis. This result do better comparing with doctors observation or traditional diagnosis tools. Deep learning can predict the five years risk of any cancer using medical based data. So this advance technology  already performs better with higher accuracy in detecting early age cancer like gastric cancer diagnosis, thyroid cancer diagnosis, lung cancer diagnosis, mammography of breast cancer, oral cancer, skin cancer, hepatocellular (liver) cancer \cite{article}.
+  
+  \item \textsc{Ricvan Dana Nindrea at al.} figured out the risk calculation for breast cancer through diagnostic accuracy of different ML algorithms. For finding the result,  they analysed all the published research articles (between January 2000 to May 2018) for  breast cancer where the calculation of the risk is measured by the diagnostic test accuracy for different machine learning algorithms. They collected the articles from the online article databases of PubMed, ProQuest and EBSCO.They reviewed total 1,879 articles. After the meta-analysis and their systematic review, they selected 11 articles. They actually performed  comprehensive analysis of five algorithm which are (1) Super VectorMachine (SVM), (2) Artificial Neural Networks (ANN), (3) Decision Tree (DT), (4) Naive Bayes (NB), (5) K-Nearest Neighbor(KNN). They classified the result as an excellent category by the help of SVM, where the Area Under Curve (AUC) which was found from the SROC  was more than 90\%. At the end, the meta-analysis got the conclusion that the SVM algorithm can calculate the risk of  breast cancer with the maximum  accuracy(99.51\%) rather than any other machine learning algorithms \cite{Nindrea2018}.
+  
+    \item \textsc{Kourou et al.} described the importance of classifying cancer patients into two groups on basis of the risk measurement, either high or low. It has influenced countless researchers of the field of bioinformatics and biomedical for studying machine learning (ML) methods. Various ML techniques employed for the improvement and execution of cancerous conditions. The ML tools can also able to recognize the key features which are found from complex datasets and reveal their significance. There is lots of different techniques, which are Artificial Neural Networks (ANNs), Bayesian Networks (BNs), Support Vector Machines (SVMs)  and Decision Trees (DTs). These approaches applied in the development of predictive models in the research of cancer and result in an effective and accurate decision-making process. They found that most of the predictions were performed by integrating clinical, genomic, imaging,  histological, epidemiological, demographic data and proteomic data or different combinations of these types. Based on their analysis, it is obvious that the integration of heterogeneous data which is actually multidimensional, that combines with different methods for classification and selection of feature can provide a tool for inference in the domain of cancer \cite{KOUROU20158}.
+    
+    \item \textsc{Wenbin Yue et al.} shared their experience while reviewing the machine learning (ML) algorithms  and techniques in the diagnosis and prognosis of breast cancer (BC). They provide explanations of various ML techniques, which are artificial neural networks (ANNs), support vector machines (SVMs), decision trees (DTs), and k-nearest neighbors (k-NNs). After that, they apply these algorithms in the analysis of breast cancer data. They collected the data from the Wisconsin breast cancer database (WBCD) which is known as the benchmark database for comparing the results through several algorithms. In the process of improving the classification and the accuracy of prediction, they found remarkable results through using these ML techniques. Finally, they describe and show a healthcare system model of their current work.  They also found that for a long period ANNs have performed on BC diagnosis and prognosis, but at present, the other ML methods have been applying in the intelligent healthcare systems so that it creates some different or new options for physicians \cite{designs2020013}.
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+\end{enumerate}
+
+
+
+
+\section{Summary}
+\label{sum_back}
+We reviewed 11 different papers including meta analysis. In these papers, they discussed about different types of technology like single-cell RNA Seq data analysis, medical image analysis, different types of biological data analysis for cancer prediction. After finishing the literature review of the collected papers, we found that single-cell RNA Seq is the next generation technology which can able to detect cancer more accurately than before. Even it can have the ability to find rare cancer cells. At present, there are some tools available that use the single-cell RNA Seq data for predicting gene expression. All these tools are handled zero counts or multi-modality but not both. Among most of the ML methods, SVM and ANN performed better than other ML models. The identification of differential gene expression using single-cell RNA Seq still remain challenges. So there is lots of scope in working with the single-cell RNA Seq technology in predicting cancer using the gene expression data.
+
+

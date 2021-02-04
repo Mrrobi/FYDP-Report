@@ -1,0 +1,46 @@
+\chapter{Standards and Design Constraints}
+In this section, we discuss which engineering standards and constraints we have followed in our project. We also present which significant challenges we have faced during our project work. . 
+\section{Compliance with the Standards}
+In this section we mentioned the standards that we are following for our project.Because we need to maintain standards and which method we use and why we don't use other alternate method or issues.
+
+\subsection{Software Standard}
+In Table 5.1 we showing which software standard we used and the reason behind our choice and some alternative software that are also available.
+\begin{table}[H]
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Software\\ Standards\end{tabular}}} & \multicolumn{1}{c|}{\textbf{Chosen}} & \multicolumn{1}{c|}{\textbf{Reason}}                                                                                                                                                                                                 & \multicolumn{1}{c|}{\textbf{Alternatives}}                                \\ \hline
+Dataset                                                                                     & TCGA,GEO                             & \begin{tabular}[c]{@{}l@{}}TCGA provides a large number of  cancer\\  patients data and this data are publicly\\  available for cancer research.GEO provides\\  gene expression datafrom NCBI.\\  It’s free and secure.\end{tabular} &                                                                  \\ \hline
+Coding language                                                                             & Python 3                             & \begin{tabular}[c]{@{}l@{}}High readability, an extensive selection of\\  libraries and cross platforms.\end{tabular}                                                                                                                & R language                                                       \\ \hline
+Version Controller                                                                          & Github                               & \begin{tabular}[c]{@{}l@{}}Open source allows branching and provides\\  cloud-based repository, free and reliable.\end{tabular}                                                                                                      & \begin{tabular}[c]{@{}l@{}}Bigbucket,\\ Sourceforge\end{tabular} \\ \hline
+PM tools                                                                                    & Excel                                & Open source and easy to use for gannt charts.                                                                                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Trello,\\  Taskade\end{tabular}       \\ \hline
+Design Standard                                                                             & Draw.io                              & \begin{tabular}[c]{@{}l@{}}Open source and allows to design in online,\\  thoroughly, visual representation\end{tabular}                                                                                                             & \begin{tabular}[c]{@{}l@{}}UML,\\  Lucidchart\end{tabular}       \\ \hline
+\end{tabular}
+\caption{Software Standards}
+\label{table:1}
+\end{table}
+\section{Design Constraints}
+There will always be some constraints in any project. These limitations need to be taken into account for completing the project according to the plan. In this segment, we discuss the fields where our project faces challenges.
+\subsection{Economic Constraint}
+\subsection{Ethical Constraint}
+
+
+Our cancer classification tool has to be reliable in the end.  Our tool has the ability to detect cancer cells, which is extremely sensitive as it is. A patient’s clinical treatment may depend on the outcome of our tool. Since, we are dealing with patient’s gene expression data, there is the matter of the privacy of data as well. These are the ethical constraints we face while working on our project.
+
+
+\subsection{Health and Safety Constraint}
+Our designed tool’s prediction accuracy has to be as high as possible so that the clinical treatments can be more effective. So, we face health constraints here that we cannot afford to give a low accuracy of prediction which won’t be good enough for treatment. The application also needs to be able to detect cancer and tumor when it is in its earlier stages. Detecting cancer and tumor at an earlier stage helps the experts or the doctors to start the proper treatment which is most effective for the patient’s health.
+\subsection{Manufacturability and Cost Analysis}
+\subsection{Sustainability}
+Our tool must have to be user friendly. So the user can easily understand the features and able to deploy them for finding the outcome.
+
+\section{Challenges}
+In this section, we discuss the various challenges we are going to face while developing our
+project and afterward. We have categorized these challenges into three categories, which are
+interdependence, interaction with stakeholders, and post-implementation and impact measurement. Now we are describing these in detail in the following subsections.
+
+\subsection{Interdependence}
+The main workflow of our project deals with data collection, data pre-processing, data processing, selecting ML model and retraining of that ML model to enhance its better accuracy based on new data. The interdependence of these processes gives rise to a few challenges during their development and implementation. The quality of the data collected will affect the prediction model, the performance of which will determine the retraining phase. We collected our data from two renowned websites which are TCGA(The Cancer Genome Atlas) and GEO(Gene Expression Omnibus) database, which provides many restrictions due to privacy issues. As a result, it might be difficult to acquire the most appropriate data. Furthermore, processing the raw data to do pre-processing is a challenge of its own.
+
+
+\subsection{Interaction with Stakeholders}
+\subsection{Post-Implementation Impact Measurement}

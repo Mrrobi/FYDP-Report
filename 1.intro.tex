@@ -1,0 +1,63 @@
+\chapter{Introduction}
+In this chapter, we will discuss about our project overview, motivation,objectives,methodology and organization of report.
+\section{Project Overview}
+\label{p_view}
+From the antediluvian age, cancer persist one of the spiteful disease that tribulates human life and comprises convoluted biological system that requires meticulous and all-inclusive analysis. over the couple of decades RNA sequencing has become a remarkable way for transcriptome profiling. The revolution sparkled when high throughput sequencing arrived \cite{pmid16056220} from bulk RNA sequencing to single molecular, single cell. Spatial transcriptome methods has enabled increasingly meticulous cell resolution incorporated with spatial information \cite{Hong2020}. Among those who provide such information, The Cancer Genome Atlas  (TCGA) plays a significant role to generate and deposit multi-platform genomic analysis such as gene expression, protein expression, DNA mythailation and copy number variation of over 10,678 patients across 33 cancer types \cite{Carrot-Zhang2020}. From all those genomic analysis gene expression can help us specify tumorigenic  features of any cell type and give us knowledge to extract important information to understand cancer characteristics and there biological behaviour. Some cancers may share similar feature which could provide us valuable information to study or work with the cancers that are less studied up until now.\\[10pt]
+Foremost improvement in single cell transcriptomics have given researchers the power to discover novel cell types. Understanding complex genomic characteristics help researchers greatly in finding diseases. However this improvement of RNA sequencing doesn't go as smoothly as it should. Researchers faces new challenges in measuring technologies like amplification bias, library size differences \cite{Vallejos2017}, cell cycle \cite{Buettner2015} and most specially low capture rate of RNA \cite{Kharchenko2014} leads to substantial noise in scRNA-seq experiments which is called dropouts. \\[10pt]
+Cells are the main coding unit for the blueprint of the genome which is translated and transcripted into biological functions. Heterogeneity of cells which comes from different kind of gene regulation, gene mutation, stochastic dissimilarity is reflected at the transcriptomic, proteomic and genomics levels. This kind of heterogeneity is a significant factor of cancer treatment failure. Since treatment which targets specific tumour cell population might not work against another tumour cell population. Cancer itself a complex disease but during formation of malignant cells the lineages divides and form intratumour heterogeneity. It is clear that conventional bulk detection which measures the average profile of the tumour population have limitations to characterize intricated disease like cancer \cite{Saadatpour2015}. \\[10pt]
+With the speedy development of single cell sequencing technologies. Researchers get hands on a large scale of multi-platform genomic profiles of individual cells, which helps them to characterize cell types and their functions of single cells in neutral manner \cite{10.1093/bib/bbz096}. 
+
+\section{Motivation}
+\label{motiv}
+Cancer is a intricate disease of human body till now which does not have any guaranteed detection, thus proper treatment. Conventional bulk sequence based characterization has high chances of misjudgement and leads to wrong treatment. In 1993 to 1995 at California, 26,312 patients were diagnosed with colon cancer and 10,687 were diagnosed with rectal cancer. Among the patients who were diagnosed with colon and rectal cancer, 700 and 1958 patients died respectively for mistreatment because of misclassification \cite{10.1093/jnci/djr207}. According to WHO (World Health Organization) in 2018, there were 18,078,957 cancer cases in the whole world, all sexes, all ages (5-70).\\[10pt] 
+So accurate cancer classification is in a great demand but still there is no state of the art solution to solve this issue. In present world, computer automation impact in every aspects of modern science. Such revolution also occurred in medical science as well. There are so many organizations who generate and deposit high throughput sequencing, which is publicly available for researchers. Using this high throughput data and state of the art technology, computer can solve this issue. That's why the computer science researchers are now involving themselves in this field to solve complex biological characterization problems using machine learning. By walking in their footsteps, we proposed this tool that can classify different kind of cancers from their single cell gene expression profile using machine learning.          
+\section{Objectives}
+\label{obj}
+We are aiming to develop a web based tool where users can classify if a patient (s) has cancer or not by gene count data. We are also focusing on identifying which type of cancer patient (s) has. 
+\section{Methodology}
+\label{methodo}
+As Machine learning models are used to classify different kind of classification problem so we are using machine learning models to classify the classification between cancer and normal cells, also classifying between cancer types. Numerous machine learning models are present among them, SVM (Support Vactor Machine), RF (Random Forest), KNN (k- Nearest neighbour) and NN (Neural Network) is the most used and best performing machine learning model for cancer classification/ prediction \cite{pmid30049182}. For our tool, we also choose L-SVM, RBF-SVM, Neural Network.    
+% \section{Project Outcome}
+% A web based cancer classification tool that is publicly available for research and medical purpose.
+\section{Organization of Report Summary}
+\label{org_rep}
+From this section we will be shown what is the content of our report. Our report contains 6 chapter. In chapter one we give a brief introduction about our project. In chapter two we provide preliminary knowledge that is required for further understanding and also added some related works. chapter 3 contains requirement analysis , methods and design of our project. next chapters we discuss about engineering standards , constraints , challenges , limitations and summary
+\subsection{Chapter One: Introduction}
+In this chapter we introduce our project briefly
+\begin{enumerate}
+  \item \textbf{Project Overview}: In section \ref{p_view} we provide the project overview of the project in details.
+  \item \textbf{Motivation}: In section \ref{motiv} we discuss how we get our motivation to approach for this project.
+  \item \textbf{Objectives}: What is our objective and what goals we want to achieve is presented here \ref{obj}.
+  \item \textbf{Methodology}: Methods that we choose to use for us is detailed here \ref{methodo}.
+\end{enumerate}
+
+\subsection{Chapter Two: Background}
+here we briefs about the biological, computational preliminaries and literature review.
+\begin{enumerate}
+  \item \textbf{Biological Preliminaries}: In section \ref{bio_pre} we provide biological information one should know before start to read the next chapters.
+  \item \textbf{Biological Preliminaries}: In section \ref{comp_pre} we provide algorithms and evaluation matrices we used in our project.
+  \item \textbf{Literature Review}: In section \ref{lit_rev} we provide more than 10 paper review which directly or indirectly relates with our project .
+  \item \textbf{Summary}: In section \ref{sum_back} summarized all the background information's.
+\end{enumerate}
+
+\subsection{Chapter Three: Project Design}
+\begin{enumerate}
+  \item \textbf{Requirement Analysis}: 
+  \item \textbf{Methodology and Design}:
+  \item \textbf{Summary}: 
+\end{enumerate}
+
+\subsection{Chapter Four: Implements and Results}
+\begin{enumerate}
+  \item \textbf{Environment Setup}: 
+  \item \textbf{Evaluation}:
+  \item \textbf{Results and Discussion}:
+  \item \textbf{Summary}: 
+\end{enumerate}
+
+\subsection{Chapter Five: Standards and Design Constraints}
+\begin{enumerate}
+  \item \textbf{Compliance with the standards}: 
+  \item \textbf{Design Constraints}:
+  \item \textbf{Challenges}:
+\end{enumerate}
