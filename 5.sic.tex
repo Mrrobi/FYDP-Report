@@ -1,4 +1,5 @@
 \chapter{Standards and Design Constraints}
+\label{std_des}
 In this section, we discuss which engineering standards and constraints we have followed in our project. We also present which significant challenges we have faced during our project work. . 
 \section{Compliance with the Standards}
 In this section we mentioned the standards that we are following for our project.Because we need to maintain standards and which method we use and why we don't use other alternate method or issues.
@@ -19,8 +20,9 @@ Design Standard                                                                 
 \label{table:1}
 \end{table}
 \section{Design Constraints}
+\label{Des_con}
 There will always be some constraints in any project. These limitations need to be taken into account for completing the project according to the plan. In this segment, we discuss the fields where our project faces challenges.
-\subsection{Economic Constraint}
+% \subsection{Economic Constraint}
 \subsection{Ethical Constraint}
 
 
@@ -29,18 +31,23 @@ Our cancer classification tool has to be reliable in the end.  Our tool has the 
 
 \subsection{Health and Safety Constraint}
 Our designed tool’s prediction accuracy has to be as high as possible so that the clinical treatments can be more effective. So, we face health constraints here that we cannot afford to give a low accuracy of prediction which won’t be good enough for treatment. The application also needs to be able to detect cancer and tumor when it is in its earlier stages. Detecting cancer and tumor at an earlier stage helps the experts or the doctors to start the proper treatment which is most effective for the patient’s health.
-\subsection{Manufacturability and Cost Analysis}
-\subsection{Sustainability}
-Our tool must have to be user friendly. So the user can easily understand the features and able to deploy them for finding the outcome.
+% \subsection{Maneuverability and Cost Analysis} 
+% \subsection{Sustainability}
+% Our tool must have to be user friendly. So the user can easily understand the features and able to deploy them for finding the outcome.
 
 \section{Challenges}
+\label{Chal}
 In this section, we discuss the various challenges we are going to face while developing our
 project and afterward. We have categorized these challenges into three categories, which are
 interdependence, interaction with stakeholders, and post-implementation and impact measurement. Now we are describing these in detail in the following subsections.
 
 \subsection{Interdependence}
-The main workflow of our project deals with data collection, data pre-processing, data processing, selecting ML model and retraining of that ML model to enhance its better accuracy based on new data. The interdependence of these processes gives rise to a few challenges during their development and implementation. The quality of the data collected will affect the prediction model, the performance of which will determine the retraining phase. We collected our data from two renowned websites which are TCGA(The Cancer Genome Atlas) and GEO(Gene Expression Omnibus) database, which provides many restrictions due to privacy issues. As a result, it might be difficult to acquire the most appropriate data. Furthermore, processing the raw data to do pre-processing is a challenge of its own.
+\begin{enumerate}
+    
 
+  \item \textbf{Data Process Related:} The main workflow of our project deals with data collection, data pre-processing, data processing, selecting ML model and retraining of that ML model to enhance its better accuracy based on new data. The interdependence of these processes gives rise to a few challenges during their development and implementation. The quality of the data collected will affect the prediction model, the performance of which will determine the retraining phase. We collected our data from two renowned websites which are TCGA (The Cancer Genome Atlas) and GEO (Gene Expression Omnibus) project, which provides many restrictions due to privacy issues. As a result, it might be difficult to acquire the most appropriate data. Furthermore, processing the raw data to do pre-processing is a challenge of its own. 
+  \item \textbf{Model training related:} Machine learning models are fascinating things, they can do so much but yet they are not so easy to work with, there is a lot of hyper-parameters. In our project we had to spend a lot of time experimenting to get the correct set or the optimal set of hyper-parameters. specially for neural network we had to design multiple model architect and experiment on them to get the model that suit best with our data.  
+\end{enumerate}
 
-\subsection{Interaction with Stakeholders}
-\subsection{Post-Implementation Impact Measurement}
+% \subsection{Interaction with Stakeholders}
+% \subsection{Post-Implementation Impact Measurement}
